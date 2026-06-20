@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Club and Gym VIP | Balichandrapur</title>
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<meta name="description" content="Premium Unisex Multi Gym in Balichandrapur, Odisha. Body Building, Weight Loss, Zumba, Personal Training. AC Gym with Free Wi-Fi.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --gold: #D4AF37;
+    --gold-bright: #F4D06F;
+    --bronze: #8C6A2F;
+    --black: #000000;
+    --charcoal: #0A0A0A;
+    --steel: #161616;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    background-color: var(--black);
+    color: #EDEDED;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+  .font-display{ font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; }
+  .font-head{ font-family: 'Oswald', sans-serif; }
+
+  .text-gold{ color: var(--gold); }
+  .bg-gold{ background-color: var(--gold); }
+  .border-gold{ border-color: var(--gold); }
+
+  .gold-gradient-text{
+    background: linear-gradient(120deg, #8C6A2F 0%, #D4AF37 35%, #F4D06F 50%, #D4AF37 65%, #8C6A2F 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .grain-bg{
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(212,175,55,0.07), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(212,175,55,0.05), transparent 45%);
+  }
+
+  .steel-card{
+    background: linear-gradient(155deg, #121212 0%, #0A0A0A 100%);
+    border: 1px solid rgba(212,175,55,0.18);
+  }
+
+  .gold-glow:hover{
+    box-shadow: 0 0 25px rgba(212,175,55,0.35), 0 0 60px rgba(212,175,55,0.08);
+  }
+
+  .nav-link{
+    position: relative;
+    transition: color 0.25s ease;
+  }
+  .nav-link::after{
+    content:'';
+    position:absolute;
+    left:0; bottom:-6px;
+    width:0%; height:1.5px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover{ color: var(--gold); }
+  .nav-link:hover::after{ width:100%; }
+
+  .btn-primary{
+    background: linear-gradient(95deg, #D4AF37, #F4D06F, #D4AF37);
+    color: #050505;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .btn-primary:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212,175,55,0.45);
+  }
+
+  .pricing-card{
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+  .pricing-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(212,175,55,0.18);
+  }
+
+  .feature-icon-wrap{
+    background: radial-gradient(circle, rgba(212,175,55,0.14), rgba(212,175,55,0.02));
+    border: 1px solid rgba(212,175,55,0.3);
+  }
+
+  .divider-gold{
+    height: 2px;
+    width: 60px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  }
+
+  .reveal{
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.show{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+
+  .star-row i{ color: var(--gold); }
+
+  .pulse-dot{
+    box-shadow: 0 0 0 0 rgba(212,175,55,0.7);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse{
+    0%{ box-shadow: 0 0 0 0 rgba(212,175,55,0.55); }
+    70%{ box-shadow: 0 0 0 12px rgba(212,175,55,0); }
+    100%{ box-shadow: 0 0 0 0 rgba(212,175,55,0); }
+  }
+
+  .hero-bg{
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.12), transparent 55%),
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 40px);
+  }
+
+  .scroll-marquee{
+    white-space: nowrap;
+    animation: marquee 22s linear infinite;
+  }
+  @keyframes marquee{
+    0%{ transform: translateX(0); }
+    100%{ transform: translateX(-50%); }
+  }
+
+  ::-webkit-scrollbar{ width: 8px; }
+  ::-webkit-scrollbar-track{ background: #000; }
+  ::-webkit-scrollbar-thumb{ background: var(--bronze); border-radius: 4px; }
+
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+</style>
+</head>
+<body class="grain-bg">
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-gold/10 transition-all">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
+    <a href="#home" class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-full border-2 border-gold overflow-hidden flex items-center justify-center">
+        <img src="logo.jpg" alt="Fitness Club VIP Logo" class="w-full h-full object-cover">
+      </div>
+      <div class="leading-tight">
+        <p class="font-display text-2xl tracking-widest text-white">FITNESS CLUB <span class="text-gold">VIP</span></p>
+        <p class="text-[10px] uppercase tracking-[0.25em] text-gray-400 -mt-1">Balichandrapur</p>
+      </div>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-9 font-head text-sm uppercase tracking-wider text-gray-300">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#amenities" class="nav-link">Amenities</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="#pricing" class="btn-primary hidden md:inline-block font-head font-semibold uppercase text-sm tracking-wider px-6 py-3 rounded-full">
+      Join Now
+    </a>
+
+    <button id="menuBtn" class="lg:hidden text-gold text-2xl" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-black border-t border-gold/10 px-6 py-6 flex flex-col gap-5 font-head uppercase tracking-wider text-gray-300">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#amenities" class="mobile-link">Amenities</a>
+    <a href="#pricing" class="mobile-link">Pricing</a>
+    <a href="#testimonials" class="mobile-link">Testimonials</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#pricing" class="btn-primary text-center font-semibold px-6 py-3 rounded-full">Join Now</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero-bg relative min-h-screen flex items-center pt-32 pb-20 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-14 items-center">
+
+    <div class="reveal">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="w-2.5 h-2.5 rounded-full bg-gold pulse-dot"></span>
+        <span class="font-head text-xs uppercase tracking-[0.3em] text-gold">Unisex Multi Gym &middot; Balichandrapur</span>
+      </div>
+
+      <h1 class="font-display text-5xl sm:text-6xl md:text-7xl leading-[0.95] text-white mb-6">
+        UNLEASH YOUR <br>
+        <span class="gold-gradient-text">ULTRA FITNESS</span><br>
+        POTENTIAL
+      </h1>
+
+      <p class="text-gray-400 text-base md:text-lg max-w-md mb-8 font-light">
+        Odisha's most organized, fully air-conditioned training floor — built for body builders, weight-loss warriors, and everyone serious about transformation.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 mb-10">
+        <a href="#pricing" class="btn-primary font-head font-semibold uppercase text-sm tracking-wider px-8 py-4 rounded-full">
+          View Membership Plans <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+        <a href="https://wa.me/919348760248" target="_blank" class="border border-gold/40 text-white font-head uppercase text-sm tracking-wider px-8 py-4 rounded-full hover:border-gold hover:text-gold transition gold-glow">
+          <i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> Quick Enquiry
+        </a>
+      </div>
+
+      <div class="flex flex-wrap gap-6 sm:gap-10">
+        <div class="flex items-center gap-3">
+          <div class="star-row text-lg">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <div class="leading-tight">
+            <p class="text-white font-semibold text-sm">5.0 Rating</p>
+            <p class="text-gray-500 text-xs">201+ Google Reviews</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 border-l border-gold/20 pl-6">
+          <i class="fa-regular fa-clock text-gold text-xl"></i>
+          <div class="leading-tight">
+            <p class="text-white font-semibold text-sm">Open Daily</p>
+            <p class="text-gray-500 text-xs">Closes 10 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal relative flex justify-center lg:justify-end">
+      <div class="relative w-full max-w-md aspect-[4/5] rounded-2xl steel-card overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="relative z-10 flex flex-col items-center text-center px-8">
+          <div class="w-28 h-28 rounded-full border-2 border-gold overflow-hidden flex items-center justify-center mb-6">
+            <img src="logo.jpg" alt="Fitness Club VIP Logo" class="w-full h-full object-cover">
+          </div>
+          <p class="font-display text-3xl text-gold tracking-widest">VIP</p>
+          <p class="font-head uppercase text-xs tracking-[0.3em] text-gray-300 mt-1">Fitness Club &amp; Gym</p>
+          <div class="divider-gold my-5"></div>
+          <p class="text-gray-400 text-sm font-light">Train like it matters. Because it does.</p>
+        </div>
+        <div class="absolute top-5 right-5 bg-black/70 border border-gold/30 rounded-full px-4 py-2 flex items-center gap-2">
+          <i class="fa-solid fa-bolt text-gold text-xs"></i>
+          <span class="text-[11px] font-head uppercase tracking-wider text-white">AC Equipped</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="bg-gold/5 border-y border-gold/15 py-3 overflow-hidden">
+  <div class="scroll-marquee font-head uppercase text-sm tracking-[0.3em] text-gold/80 flex gap-10">
+    <span>Body Building &nbsp;&bull;&nbsp; Weight Loss &nbsp;&bull;&nbsp; Strength Gain &nbsp;&bull;&nbsp; Zumba &nbsp;&bull;&nbsp; Personal Training &nbsp;&bull;&nbsp; Arm Wrestling &nbsp;&bull;&nbsp; Power Lifting &nbsp;&bull;&nbsp;</span>
+    <span>Body Building &nbsp;&bull;&nbsp; Weight Loss &nbsp;&bull;&nbsp; Strength Gain &nbsp;&bull;&nbsp; Zumba &nbsp;&bull;&nbsp; Personal Training &nbsp;&bull;&nbsp; Arm Wrestling &nbsp;&bull;&nbsp; Power Lifting &nbsp;&bull;&nbsp;</span>
+  </div>
+</div>
+
+<!-- ABOUT / KEY FEATURES -->
+<section id="about" class="py-24 px-5 md:px-8 bg-black">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+      <p class="font-head text-gold uppercase text-xs tracking-[0.3em] mb-3">Unisex Multi Gym</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white">WHAT WE <span class="text-gold">SPECIALIZE</span> IN</h2>
+      <div class="divider-gold mx-auto mt-5"></div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="reveal steel-card rounded-xl p-8 hover:border-gold/50 gold-glow transition">
+        <div class="feature-icon-wrap w-14 h-14 rounded-lg flex items-center justify-center mb-5">
+          <i class="fa-solid fa-dumbbell text-gold text-xl"></i>
+        </div>
+        <h3 class="font-head text-lg text-white uppercase mb-2">Body Building &amp; Power Lifting</h3>
+        <p class="text-gray-500 text-sm font-light">Structured strength programs for serious mass and raw power gains.</p>
+      </div>
+
+      <div class="reveal steel-card rounded-xl p-8 hover:border-gold/50 gold-glow transition">
+        <div class="feature-icon-wrap w-14 h-14 rounded-lg flex items-center justify-center mb-5">
+          <i class="fa-solid fa-weight-scale text-gold text-xl"></i>
+        </div>
+        <h3 class="font-head text-lg text-white uppercase mb-2">Weight Loss &amp; Weight Gain</h3>
+        <p class="text-gray-500 text-sm font-light">Customized routines whichever direction your goal takes you.</p>
+      </div>
+
+      <div class="reveal steel-card rounded-xl p-8 hover:border-gold/50 gold-glow transition">
+        <div class="feature-icon-wrap w-14 h-14 rounded-lg flex items-center justify-center mb-5">
+          <i class="fa-solid fa-hand-fist text-gold text-xl"></i>
+        </div>
+        <h3 class="font-head text-lg text-white uppercase mb-2">Strength &amp; Arm Wrestling</h3>
+        <p class="text-gray-500 text-sm font-light">Dedicated functional strength training for grip and arm power.</p>
+      </div>
+
+      <div class="reveal steel-card rounded-xl p-8 hover:border-gold/50 gold-glow transition">
+        <div class="feature-icon-wrap w-14 h-14 rounded-lg flex items-center justify-center mb-5">
+          <i class="fa-solid fa-music text-gold text-xl"></i>
+        </div>
+        <h3 class="font-head text-lg text-white uppercase mb-2">Zumba &amp; Group Training</h3>
+        <p class="text-gray-500 text-sm font-light">High-energy group sessions that make cardio feel like a party.</p>
+      </div>
+
+      <div class="reveal steel-card rounded-xl p-8 hover:border-gold/50 gold-glow transition sm:col-span-2 lg:col-span-1">
+        <div class="feature-icon-wrap w-14 h-14 rounded-lg flex items-center justify-center mb-5">
+          <i class="fa-solid fa-apple-whole text-gold text-xl"></i>
+        </div>
+        <h3 class="font-head text-lg text-white uppercase mb-2">Nutrition &amp; Personal Training</h3>
+        <p class="text-gray-500 text-sm font-light">One-on-one coaching with diet guidance built around your body.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section id="amenities" class="py-24 px-5 md:px-8 bg-[#050505] border-y border-gold/10">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    <div class="reveal order-2 lg:order-1">
+      <p class="font-head text-gold uppercase text-xs tracking-[0.3em] mb-3">Premium Amenities</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">A FLOOR BUILT <br> FOR <span class="text-gold">COMFORT</span></h2>
+      <p class="text-gray-500 font-light mb-10 max-w-md">Every detail of our facility is designed so nothing gets between you and your workout.</p>
+
+      <div class="space-y-5">
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 shrink-0 rounded-full feature-icon-wrap flex items-center justify-center"><i class="fa-solid fa-snowflake text-gold"></i></div>
+          <div>
+            <p class="font-head text-white uppercase text-sm tracking-wide">Full Air Conditioning</p>
+            <p class="text-gray-500 text-sm font-light">Train comfortably, even in peak summer heat.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 shrink-0 rounded-full feature-icon-wrap flex items-center justify-center"><i class="fa-solid fa-wifi text-gold"></i></div>
+          <div>
+            <p class="font-head text-white uppercase text-sm tracking-wide">Free High-Speed Wi-Fi</p>
+            <p class="text-gray-500 text-sm font-light">Stay connected between sets.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 shrink-0 rounded-full feature-icon-wrap flex items-center justify-center"><i class="fa-solid fa-people-arrows text-gold"></i></div>
+          <div>
+            <p class="font-head text-white uppercase text-sm tracking-wide">Supportive Trainers &amp; Owner</p>
+            <p class="text-gray-500 text-sm font-light">Always present, always guiding your form.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 shrink-0 rounded-full feature-icon-wrap flex items-center justify-center"><i class="fa-solid fa-broom text-gold"></i></div>
+          <div>
+            <p class="font-head text-white uppercase text-sm tracking-wide">Clean &amp; Spacious Floor</p>
+            <p class="text-gray-500 text-sm font-light">A well-organized layout with zero clutter.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal order-1 lg:order-2 grid grid-cols-2 gap-4">
+      <div class="steel-card rounded-xl p-6 aspect-square flex flex-col items-center justify-center text-center gold-glow transition">
+        <i class="fa-solid fa-snowflake text-gold text-3xl mb-3"></i>
+        <p class="font-head text-white text-sm uppercase">AC Gym</p>
+      </div>
+      <div class="steel-card rounded-xl p-6 aspect-square flex flex-col items-center justify-center text-center gold-glow transition">
+        <i class="fa-solid fa-wifi text-gold text-3xl mb-3"></i>
+        <p class="font-head text-white text-sm uppercase">Free Wi-Fi</p>
+      </div>
+      <div class="steel-card rounded-xl p-6 aspect-square flex flex-col items-center justify-center text-center gold-glow transition">
+        <i class="fa-solid fa-user-tie text-gold text-3xl mb-3"></i>
+        <p class="font-head text-white text-sm uppercase">Expert Trainers</p>
+      </div>
+      <div class="steel-card rounded-xl p-6 aspect-square flex flex-col items-center justify-center text-center gold-glow transition">
+        <i class="fa-solid fa-warehouse text-gold text-3xl mb-3"></i>
+        <p class="font-head text-white text-sm uppercase">Spacious Floor</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-24 px-5 md:px-8 bg-black">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+      <p class="font-head text-gold uppercase text-xs tracking-[0.3em] mb-3">Membership Plans</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white">INVEST IN <span class="text-gold">YOURSELF</span></h2>
+      <div class="divider-gold mx-auto mt-5"></div>
+    </div>
+
+    <!-- main 3 plans -->
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+
+      <!-- Quarterly -->
+      <div class="pricing-card steel-card rounded-2xl p-8 flex flex-col reveal">
+        <p class="font-head uppercase text-sm tracking-[0.2em] text-gray-400 mb-2">Quarterly Plan</p>
+        <p class="font-display text-5xl text-white mb-1">₹2,299<span class="text-base text-gray-500 font-head">/-</span></p>
+        <p class="text-gray-500 text-xs mb-6">3 Months</p>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="text-[11px] font-head uppercase bg-gold/10 text-gold border border-gold/30 rounded-full px-3 py-1">Admission Free</span>
+        </div>
+        <ul class="space-y-3 text-sm text-gray-400 font-light mb-8 flex-1">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-gold mt-1"></i> Full gym floor access</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-gold mt-1"></i> AC training environment</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-gold mt-1"></i> Free Wi-Fi access</li>
+        </ul>
+        <a href="https://wa.me/919348760248" target="_blank" class="border border-gold/40 text-white text-center font-head uppercase text-sm tracking-wider py-3 rounded-full hover:border-gold hover:text-gold transition">Choose Plan</a>
+      </div>
+
+      <!-- Annual - Best Value -->
+      <div class="pricing-card relative steel-card rounded-2xl p-8 flex flex-col border-2 border-gold reveal lg:-translate-y-4">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-black font-head uppercase text-xs tracking-wider px-4 py-1.5 rounded-full whitespace-nowrap">Best Value</span>
+        <p class="font-head uppercase text-sm tracking-[0.2em] text-gold mb-2 mt-2">Annual Plan</p>
+        <p class="font-display text-5xl text-white mb-1">₹5,999<span class="text-base text-gray-500 font-head">/-</span></p>
+        <p class="text-gray-500 text-xs mb-6">12 Months</p>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="text-[11px] font-head uppercase bg-gold/10 text-gold border border-gold/30 rounded-full px-3 py-1">Admission Free</span>
+          <span class="text-[11px] font-head uppercase bg-gold/10 text-gold border border-gold/30 rounded-full px-3 py-1">Cupping Massage Free</span>
+        </div>
+        <ul class="space-y-3 text-sm text-gray-300 font-light mb-8 flex-1">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-gold mt-1"></i> Everything in Quarterly Plan</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-gold mt-1"></i> Free Cupping Massage</li>
+          <li class="flex gap-2"><i class="fa-solid fa-gift text-gold mt-1"></i> <span class="text-white">+1 Month Personal Training FREE</span> <span class="text-gray-500">(worth ₹2,500)</span></li>
+        </ul>
+        <a href="https://wa.me/919348760248" target="_blank" class="btn-primary text-center font-head font-semibold uppercase text-sm tracking-wider py-3 rounded-full">Choose Plan</a>
+      </div>
+
+      <!-- Half Yearly -->
+      <div class="pricing-card steel-card rounded-2xl p-8 flex flex-col reveal">
+        <p class="font-head uppercase text-sm tracking-[0.2em] text-gray-400 mb-2">Half Yearly Plan</p>
+        <p class="font-display text-5xl text-white mb-1">₹3,499<span class="text-base text-gray-500 font-head">/-</span></p>
+        <p class="text-gray-500 text-xs mb-6">6 Months</p>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="text-[11px] font-head uppercase bg-gold/10 text-gold border border-gold/30 rounded-full px-3 py-1">Admission Free</span>
+          <span class="text-[11px] font-head uppercase bg-gold/10 text-gold border border-gold/30 rounded-full px-3 py-1">Body Massage Free</span>
+        </div>
+        <ul class="space-y-3 text-sm text-gray-400 font-light mb-8 flex-1">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-gold mt-1"></i> Full gym floor access</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-gold mt-1"></i> Free Body Massage</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-gold mt-1"></i> AC training environment</li>
+        </ul>
+        <a href="https://wa.me/919348760248" target="_blank" class="border border-gold/40 text-white text-center font-head uppercase text-sm tracking-wider py-3 rounded-full hover:border-gold hover:text-gold transition">Choose Plan</a>
+      </div>
+
+    </div>
+
+    <!-- Monthly & Add-ons -->
+    <div class="grid lg:grid-cols-2 gap-8">
+
+      <div class="reveal steel-card rounded-2xl p-8">
+        <h3 class="font-head uppercase text-white text-lg tracking-wide mb-6 flex items-center gap-3"><i class="fa-solid fa-calendar-days text-gold"></i> Monthly &amp; Short-Term Options</h3>
+        <div class="divide-y divide-gold/10">
+          <div class="flex justify-between items-center py-4">
+            <span class="text-gray-400 text-sm font-light">Admission Fee + Monthly Fee</span>
+            <span class="text-white font-head">₹1,299 <span class="text-gray-500">+ ₹599/mo</span></span>
+          </div>
+          <div class="flex justify-between items-center py-4">
+            <span class="text-gray-400 text-sm font-light">Straight 1 Month Fee</span>
+            <span class="text-white font-head">₹799</span>
+          </div>
+          <div class="flex justify-between items-center py-4">
+            <span class="text-gray-400 text-sm font-light">7 Days Short-Term Pass</span>
+            <span class="text-white font-head">₹299</span>
+          </div>
+          <div class="flex justify-between items-center py-4">
+            <span class="text-gray-400 text-sm font-light">1 Day Pass</span>
+            <span class="text-white font-head">₹99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal steel-card rounded-2xl p-8">
+        <h3 class="font-head uppercase text-white text-lg tracking-wide mb-6 flex items-center gap-3"><i class="fa-solid fa-plus text-gold"></i> Add-On Services</h3>
+        <div class="divide-y divide-gold/10">
+          <div class="flex justify-between items-center py-4">
+            <span class="text-gray-400 text-sm font-light">Personal Training</span>
+            <span class="text-white font-head">₹1,999<span class="text-gray-500 text-xs">/mo</span></span>
+          </div>
+          <div class="flex justify-between items-center py-4">
+            <span class="text-gray-400 text-sm font-light">Cupping Massage</span>
+            <span class="text-white font-head">₹499<span class="text-gray-500 text-xs">/mo</span></span>
+          </div>
+          <div class="flex justify-between items-center py-4">
+            <span class="text-gray-400 text-sm font-light">Body Massage</span>
+            <span class="text-white font-head">₹299<span class="text-gray-500 text-xs">/mo</span></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-24 px-5 md:px-8 bg-[#050505] border-y border-gold/10">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+      <p class="font-head text-gold uppercase text-xs tracking-[0.3em] mb-3">Social Proof</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white">201+ <span class="text-gold">5-STAR</span> REVIEWS</h2>
+      <div class="divider-gold mx-auto mt-5"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="reveal steel-card rounded-xl p-8 gold-glow transition">
+        <div class="star-row mb-4 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-gray-300 font-light italic mb-6">"One of the nicest gym with excellent equipment in the area. Highly recommend!"</p>
+        <div class="flex items-center gap-3">
+          <i class="fa-brands fa-google text-gold"></i>
+          <span class="text-gray-500 text-xs">Google Review</span>
+        </div>
+      </div>
+
+      <div class="reveal steel-card rounded-xl p-8 gold-glow transition">
+        <div class="star-row mb-4 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-gray-300 font-light italic mb-6">"The atmosphere is motivating and focused, which makes a big difference."</p>
+        <div class="flex items-center gap-3">
+          <i class="fa-brands fa-google text-gold"></i>
+          <span class="text-gray-500 text-xs">Google Review</span>
+        </div>
+      </div>
+
+      <div class="reveal steel-card rounded-xl p-8 gold-glow transition">
+        <div class="star-row mb-4 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-gray-300 font-light italic mb-6">"This is one of the most organized gyms I have come across, with a wide variety of well-maintained equipment."</p>
+        <div class="flex items-center gap-3">
+          <i class="fa-brands fa-google text-gold"></i>
+          <span class="text-gray-500 text-xs">Google Review</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="py-16 px-5 md:px-8 bg-black">
+  <div class="max-w-5xl mx-auto steel-card rounded-2xl p-10 md:p-14 text-center reveal">
+    <h2 class="font-display text-3xl md:text-4xl text-white mb-3">READY TO START YOUR <span class="text-gold">TRANSFORMATION?</span></h2>
+    <p class="text-gray-500 font-light mb-8">Beginner friendly. LGBTQ+ friendly. Everyone trains here.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="tel:+919348760248" class="btn-primary font-head font-semibold uppercase text-sm tracking-wider px-8 py-4 rounded-full">
+        <i class="fa-solid fa-phone mr-2"></i> Call Now
+      </a>
+      <a href="https://wa.me/919348760248" target="_blank" class="border border-gold/40 text-white font-head uppercase text-sm tracking-wider px-8 py-4 rounded-full hover:border-gold hover:text-gold transition">
+        <i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / CONTACT -->
+<footer id="contact" class="bg-[#050505] border-t border-gold/10 pt-20 pb-8 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 mb-14">
+
+    <div>
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-10 h-10 rounded-full border-2 border-gold overflow-hidden flex items-center justify-center">
+          <img src="logo.jpg" alt="Fitness Club VIP Logo" class="w-full h-full object-cover">
+        </div>
+        <p class="font-display text-xl tracking-widest text-white">FITNESS CLUB <span class="text-gold">VIP</span></p>
+      </div>
+      <p class="text-gray-500 text-sm font-light mb-6 max-w-xs">Balichandrapur's premium unisex multi gym — body building, weight management, group training and more, all under one AC roof.</p>
+      <span class="inline-block text-[11px] font-head uppercase tracking-wider bg-gold/10 text-gold border border-gold/30 rounded-full px-4 py-2">
+        <i class="fa-solid fa-heart mr-2"></i>LGBTQ+ &amp; Beginner Friendly
+      </span>
+    </div>
+
+    <div>
+      <h4 class="font-head uppercase text-white text-sm tracking-wider mb-5">Get In Touch</h4>
+      <ul class="space-y-4 text-sm text-gray-400 font-light">
+        <li class="flex gap-3">
+          <i class="fa-solid fa-location-dot text-gold mt-1"></i>
+          <span>Second Floor, Prida Complex, College Chaka, opposite Odisha Gramya Bank, Balichandrapur, Odisha 754205</span>
+        </li>
+        <li class="flex gap-3 items-center">
+          <i class="fa-solid fa-phone text-gold"></i>
+          <a href="tel:+919348760248" class="hover:text-gold transition">+91 93487 60248</a>
+        </li>
+        <li class="flex gap-3 items-center">
+          <i class="fa-brands fa-whatsapp text-gold"></i>
+          <a href="https://wa.me/919348760248" target="_blank" class="hover:text-gold transition">Chat on WhatsApp</a>
+        </li>
+        <li class="flex gap-3 items-center">
+          <i class="fa-brands fa-instagram text-gold"></i>
+          <a href="https://instagram.com/fitnessclub_balichandrapur" target="_blank" class="hover:text-gold transition">@fitnessclub_balichandrapur</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-head uppercase text-white text-sm tracking-wider mb-5">Opening Hours</h4>
+      <div class="flex justify-between text-sm text-gray-400 font-light py-2 border-b border-gold/10">
+        <span>Mon — Sun</span><span class="text-white">Open Daily</span>
+      </div>
+      <div class="flex justify-between text-sm text-gray-400 font-light py-2 border-b border-gold/10">
+        <span>Closing Time</span><span class="text-white">10:00 PM</span>
+      </div>
+      <a href="#pricing" class="inline-block mt-6 btn-primary font-head font-semibold uppercase text-xs tracking-wider px-6 py-3 rounded-full">See Plans</a>
+    </div>
+
+  </div>
+
+  <div class="max-w-7xl mx-auto border-t border-gold/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <p class="text-gray-600 text-xs">&copy; <span id="year"></span> Fitness Club and Gym VIP, Balichandrapur. All rights reserved.</p>
+    <div class="flex gap-4">
+      <a href="https://instagram.com/fitnessclub_balichandrapur" target="_blank" class="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/919348760248" target="_blank" class="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="tel:+919348760248" class="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition"><i class="fa-solid fa-phone"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/919348760248" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-green-500 flex items-center justify-center text-white text-2xl shadow-lg shadow-green-500/30 hover:scale-110 transition">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    const icon = menuBtn.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+  });
+  document.querySelectorAll('#mobileMenu a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    });
+  });
+
+  // navbar shrink on scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      navbar.classList.add('shadow-lg', 'shadow-black/50');
+    } else {
+      navbar.classList.remove('shadow-lg', 'shadow-black/50');
+    }
+  });
+
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
